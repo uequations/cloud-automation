@@ -1,6 +1,6 @@
 # Some Terraform Basics with the AWS Provider
 
-     Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently(terraform.io).  Terraform can be installed on a variety of platforms.  Refer to the documentation for installation instructions [1].  To verify, running 'terraform --version' should be sufficient. 
+     Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently[1].  Terraform can be installed on a variety of platforms.  Refer to the documentation for installation instructions [2].  To verify, running 'terraform --version' should be sufficient. 
 
      Terraform uses the concept of providers having the capability to interact with the APIs of a growing number of XAAS services to expose instances.  In our example, we will be working with the "aws" provider. 
 
@@ -18,11 +18,11 @@
 
      We're, now, going to try some things.  Let me not fail to mention each time we try something new, we will be creating a new directory (i.e. mkdir 1, mkdir 2, ... etc.), and copying the files to it.  I'll leave it up to you to see if you can follow the recommendation and add a version constraint to the provider configuration.  Once you're done, you can use the 'terraform providers' command to verify.  We'll want to supply other values to our provider configuration as well.  For example, for the AWS provider, the AWS region is required. 
 
-     There are a few ways to set this and other values like the Secret Access Key and Access Key Id.  We'll be using a shared credentials file for this.  You may have the AWS CLI installed and a read/write protected 'credentials' file in your $HOME/.aws/ folder already.  If not, I recommend verifying you have the AWS CLI installed (aws --version) and using 'aws configure' to do this.  Refer to the AWS Documentation for details [2][3]. 
+     There are a few ways to set this and other values like the Secret Access Key and Access Key Id.  We'll be using a shared credentials file for this.  You may have the AWS CLI installed and a read/write protected 'credentials' file in your $HOME/.aws/ folder already.  If not, I recommend verifying you have the AWS CLI installed (aws --version) and using 'aws configure' to do this.  Refer to the AWS Documentation for details [3][4]. 
 
      Your AWS CLI configuration can be verified with the 'aws configure list' command. 
 
-    At this point, I think we're ready to configure our first resource.  An introduction to resources can be found on the Terraform site [4].  Given we're using Terraform with AWS, you can probably guess our first resource will be an Amazon EC2 instance.  The AWS provider identifies this as an "aws_instance" resource [5]. 
+    At this point, I think we're ready to configure our first resource.  An introduction to resources can be found on the Terraform site [5].  Given we're using Terraform with AWS, you can probably guess our first resource will be an Amazon EC2 instance.  The AWS provider identifies this as an "aws_instance" resource [6]. 
  
     We'll start with its two required arguments of 'ami' and 'instance_type."  In general, we'd like to benefit from the flexibility of variables, and so our example will reflect this. 
 
@@ -104,16 +104,16 @@ should tear everything down.
 
 ## References: 
 
-[1]  "Introduction to Terraform." [Online].  Available: "https://www.terraform.io/intro/index.html":https://www.terraform.io/intro/index.html
+[1]  "Introduction to Terraform." [Online].  Available: https://www.terraform.io/intro/index.html
 
-[2]  "Install Terraform." [Online].  Available: "https://www.terraform.io/intro/getting-started/install.html":https://www.terraform.io/intro/getting-started/install.html
+[2]  "Install Terraform." [Online].  Available: https://www.terraform.io/intro/getting-started/install.html
 
-[3]  "Installing the AWS Command Line Interface." [Online]. Available: "https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html":https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html 
+[3]  "Installing the AWS Command Line Interface." [Online]. Available: https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html 
 
-[4]  "Configuring the AWS CLI." [Online]. Available: "https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html":https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html 
+[4]  "Configuring the AWS CLI." [Online]. Available: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html 
 
-[5]  "Resource Configuration." [Online]. Available: "https://www.terraform.io/docs/configuration/resources.html":https://www.terraform.io/docs/configuration/resources.html 
+[5]  "Resource Configuration." [Online]. Available: https://www.terraform.io/docs/configuration/resources.html 
 
-[6]  "AWS Provider." [Online].  Available: "https://www.terraform.io/docs/providers/aws/index.html":https://www.terraform.io/docs/providers/aws/index.html 
+[6]  "AWS Provider." [Online].  Available: https://www.terraform.io/docs/providers/aws/index.html 
 
-[7]  "Terraform AWS Demo Source on Github." [Online].  "Available: https://github.com/uequations/cloud-automation/tree/master/terraform/aws/demo":https://github.com/uequations/cloud-automation/tree/master/terraform/aws/demo
+[7]  "Terraform AWS Demo Source on Github." [Online].  https://github.com/uequations/cloud-automation/tree/master/terraform/aws/demo
