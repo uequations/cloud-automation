@@ -1,7 +1,5 @@
 # Some Terraform Basics with the AWS Provider
 \
-     Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently[1].  Terraform can be installed on a variety of platforms.  Refer to the documentation for installation instructions [2].  To verify, running 'terraform --version' should be sufficient. 
-\
      Terraform uses the concept of providers having the capability to interact with the APIs of a growing number of XAAS services to expose instances.  In our example, we will be working with the "aws" provider. 
 \
      Generally, before using a provider, you'll have to create your GO build environment and use make to build it.  Fortunately, the AWS provider is common enough Terraform can install it from Hashicorp automatically during installation (https://releases.hashicorp.com). Let's create a simple Terraform script to show this.  We'll aptly name it provider.tf: 
