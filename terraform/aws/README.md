@@ -52,8 +52,9 @@
           provider "aws" { 
           region = "${var.aws_region}" 
           } 
-
-          main.tf 
+```
+          main.tf
+```sh          
           resource "aws_instance" "resource name" { 
           ami = "${var.aws_ami}" 
           instance_type = "${var.aws_instance_type}" 
@@ -70,9 +71,9 @@
           terraform apply
 ```
      This will look a whole lot like 'terraform plan' with the exception of the last step where you have to type 'yes' to approve the actions listed in the plan.  When the process is complete, you should get a green confirmation message: 
-
+```sh
           Apply complete! Resources: 1 added, 0 changed, 0 destroyed. 
-    
+```    
      If you're still not convinced, you can use the: 
 ```sh  
           aws ec2 describe-instances 
@@ -91,8 +92,8 @@ should tear everything down.
  
           ubuntu_aws_instance.tfvars
 ```sh
-          aws_ami = "ami-43a15f3e" #Ubuntu Server 16.04 LTS (HVM), SSD Volume Type 
- ```
+          aws_ami = "ami-43a15f3e" #Ubuntu Server 16.04 LTS (HVM), SSD Volume Type
+```
      Now, after the 'terraform plan' step, we add a '-var-file' flag to the 'terraform apply' command to make the change: 
 ```sh 
           terraform apply -var-file="ubuntu_aws_instance.tfvars"
@@ -103,16 +104,16 @@ should tear everything down.
 
 ## References: 
 
-[1]  "Introduction to Terraform." [Online].  Available: https://www.terraform.io/intro/index.html 
+[1]  "Introduction to Terraform." [Online].  Available: "https://www.terraform.io/intro/index.html":https://www.terraform.io/intro/index.html
 
-[2]  "Install Terraform." [Online].  Available: https://www.terraform.io/intro/getting-started/install.html 
+[2]  "Install Terraform." [Online].  Available: "https://www.terraform.io/intro/getting-started/install.html":https://www.terraform.io/intro/getting-started/install.html
 
-[3]  "Installing the AWS Command Line Interface." [Online]. Available: https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html 
+[3]  "Installing the AWS Command Line Interface." [Online]. Available: "https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html":https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html 
 
-[4]  "Configuring the AWS CLI." [Online]. Available: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html 
+[4]  "Configuring the AWS CLI." [Online]. Available: "https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html":https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html 
 
-[5]  "Resource Configuration." [Online]. Available: https://www.terraform.io/docs/configuration/resources.html 
+[5]  "Resource Configuration." [Online]. Available: "https://www.terraform.io/docs/configuration/resources.html":https://www.terraform.io/docs/configuration/resources.html 
 
-[6]  "AWS Provider." [Online].  Available: https://www.terraform.io/docs/providers/aws/index.html 
+[6]  "AWS Provider." [Online].  Available: "https://www.terraform.io/docs/providers/aws/index.html":https://www.terraform.io/docs/providers/aws/index.html 
 
-[7]  "Terraform AWS Demo Source on Github." [Online].  Available: https://github.com/uequations/cloud-automation/tree/master/terraform/aws/demo
+[7]  "Terraform AWS Demo Source on Github." [Online].  "Available: https://github.com/uequations/cloud-automation/tree/master/terraform/aws/demo":https://github.com/uequations/cloud-automation/tree/master/terraform/aws/demo
